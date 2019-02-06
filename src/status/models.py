@@ -17,7 +17,7 @@ class StatusManager(models.Manager):
 class Status(models.Model):
 	user 		= models.ForeignKey(settings.AUTH_USER_MODEL)
 	content 	= models.TextField(null=True,blank=True)
-	image 		= models.ImageField(upload_to='',null=True,blank=True)
+	image 		= models.ImageField(upload_to=upload_image,null=True,blank=True)
 	timestamp 	= models.DateTimeField(auto_now_add=True)
 	updated 	= models.DateTimeField(auto_now=True)
 
